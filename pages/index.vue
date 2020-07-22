@@ -2,7 +2,8 @@
   <div class="container">
       <div v-for="(post, i) in posts" :key="i">
           <p>{{post.title}}</p>
-          <p>{{post.image.url}}</p>
+        
+          <img :src="`${post.image.name}`" alt="">
       </div>
   </div>
 </template>
@@ -25,6 +26,11 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+img{
+  width: 250px;
+  height: 300px;
 }
 
 </style>
